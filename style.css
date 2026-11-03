@@ -1,0 +1,375 @@
+   /* Hides any element that has the "hidden" class */
+   .hidden {
+       display: none;
+   }
+/* =========================================
+   1. COLOR PALETTE (CSS custom properties)
+   ========================================= */
+:root {
+    --navy: #0b1f3a;
+    --blue: #1e4e8c;
+    --light-blue: #e8f0fb;
+    --white: #ffffff;
+    --gold: #d4a017;
+    --text: #1b1b1b;
+}
+
+/* =========================================
+   2. BASE STYLES (apply to every page)
+   ========================================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-blue);
+    color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--navy);
+}
+
+a {
+    color: var(--blue);
+}
+
+/* =========================================
+   3. HEADER (same on every page)
+   ========================================= */
+header {
+    background-color: var(--navy);
+    padding: 15px 30px;
+}
+
+.logo {
+    margin: 0;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   4. NAVIGATION BAR
+   ========================================= */
+nav {
+    background-color: var(--navy);
+    border-bottom: 4px solid var(--gold);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+/* Hover and keyboard focus */
+nav a:hover,
+nav a:focus {
+    color: var(--gold);
+}
+
+/* Link of the page the user is on */
+nav a.current {
+    border-bottom: 3px solid var(--gold);
+}
+/* =========================================
+   5. MAIN CONTENT AREA
+   ========================================= */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* =========================================
+   6. FOOTER (same on every page)
+   ========================================= */
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+    border-top: 4px solid var(--gold);
+}
+
+footer p {
+    margin: 0;
+}
+
+.filter-btn.active {
+    background-color: #1f6feb;
+    color: white;
+}
+
+/* =========================================
+   7. PROJECTS PAGE: FILTER BUTTONS
+   ========================================= */
+#filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    color: var(--navy);
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+    border-color: var(--gold);
+}
+
+/* Currently selected filter */
+.filter-btn.active {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+}
+
+/* =========================================
+   8. PROJECTS PAGE: GRID OF PROJECT CARDS
+   ========================================= */
+#project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project {
+    background-color: var(--white);
+    border-top: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+}
+
+.project ul {
+    padding-left: 20px;
+}
+
+/* Project screenshots: same size for every card */
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* =========================================
+   9. HOME PAGE
+   ========================================= */
+
+/* Round profile photo with a gold border */
+.profile-photo {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--gold);
+    margin-bottom: 20px;
+}
+
+/* Personal motto: visually distinct quote box */
+blockquote {
+    margin: 10px 0 30px;
+    padding: 15px 20px;
+    background-color: var(--white);
+    border-left: 5px solid var(--gold);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--navy);
+}
+
+/* Quick Links displayed as buttons */
+.quick-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.quick-links a {
+    display: inline-block;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quick-links a:hover,
+.quick-links a:focus {
+    background-color: var(--navy);
+}
+
+/* =========================================
+   10. RESUME PAGE
+   ========================================= */
+
+/* Each resume section becomes a white card */
+main section {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section titles with a gold underline */
+main section h2 {
+    margin-top: 0;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--gold);
+}
+
+/* Job/school line: title on the left, date or location on the right */
+#workExperience h3,
+#workExperience h4,
+#educ h3,
+#educ h4 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 5px;
+}
+
+.date,
+.location {
+    font-size: 0.95rem;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--blue);
+}
+
+address {
+    font-style: normal;
+}
+
+/* =========================================
+   11. CONTACT PAGE: FORM
+   ========================================= */
+#contact-form {
+    background-color: var(--white);
+    max-width: 600px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Space between each field */
+#contact-form div {
+    margin-bottom: 18px;
+}
+
+/* Labels on their own line, above the field */
+#contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--navy);
+}
+
+/* Text fields and message box */
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 2px solid #9fb3cf;
+    border-radius: 6px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+/* Field the user is typing in */
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--gold);
+    outline: 2px solid var(--gold);
+}
+
+/* Send button */
+#contact-form button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contact-form button:hover,
+#contact-form button:focus {
+    background-color: var(--navy);
+}
+
+/* =========================================
+   12. RESPONSIVE: TABLETS AND PHONES
+   ========================================= */
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    nav ul {
+        padding: 0 15px 10px;
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    main section,
+    .project,
+    #contact-form {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michel-Ange Kutu - Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p class="logo">Michel-Ange Kutu</p>
+    </header>
+    <!--links to all 4 pages-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html" class="current">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <h1>My Projects</h1>
+
+        <!-- Filter buttons -->
+        <div id="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <!-- Project grid -->
+        <div id="project-container">
+
+            <div id="hd" class="project" data-category="javascript">
+                <h2>Help Desk Ticketing & Access Management System</h2>
+                <img src="images/helpdesk.png" alt="PHP code that validates and saves a new help desk ticket">
+                <ul>
+                    <li><strong>Description:</strong> A web-based help desk application for logging, assigning, tracking and resolving IT support tickets, with an access-request approval workflow and a full audit log.
+                    </li>
+                    <li><strong>Completion date:</strong> October 2026</li>
+                    <li><strong>Technologies:</strong> PHP, SQL Server, JavaScript, HTML/CSS</li>
+                </ul>
+            </div>
+
+            <div id="ct" class="project" data-category="other">
+                <h2>Copilot Trial Feedback Dashboard</h2>
+                <img src="images/dashboard.png" alt="Power BI dashboard showing Copilot trial feedback results">
+                <ul>
+                    <li><strong>Description:</strong> An Excel and Power BI dashboard that models how an AI Copilot
+                        trial could be evaluated, using 40 simulated survey responses. It turns raw feedback into
+                        adoption and satisfaction metrics, with filters by department and adoption status.</li>
+                    <li><strong>Completion date:</strong> September 2026</li>
+                    <li><strong>Technologies:</strong> Excel, Power BI</li>
+                </ul>
+            </div>
+
+            <div id="net" class="project" data-category="other">
+                
+                <h2>Multi-Router Network Lab</h2>
+                <img src="images/topology.png" alt="Network topology diagram in Cisco Packet Tracer">
+                <ul>
+                    <li><strong>Description:</strong> A small routed network built in Cisco Packet Tracer: two sites,
+                        each with two LANs, connected by a serial WAN link. One address block is subnetted into five /27
+                        networks, and traffic between the sites is routed with static routes.</li>
+                    <li><strong>Completion date:</strong> August 2026</li>
+                    <li><strong>Technologies:</strong> Cisco routers and switches, Packet Tracer, Wireshark</li>
+                </ul>
+            </div>
+
+            <div id="ms" class="project" data-category="other">
+                
+                <h2>Linux User Management Script</h2>
+                <img src="images/linux.png" alt="Bash code for the user management menu">
+                <ul>
+                    <li><strong>Description:</strong> A menu-driven Bash tool for basic Linux system administration. It
+                        allows adding user accounts, changing login shells, and deleting accounts using standard Linux
+                        utilities.</li>
+                    <li><strong>Completion date:</strong> August 2026</li>
+                    <li><strong>Technologies:</strong> Bash, Linux user management commands (useradd, usermod, userdel)
+                    </li>
+                </ul>
+            </div>
+
+            <div id="pf" class="project" data-category="html-css">
+                <h2>Responsive Portfolio Website</h2>
+                <img src="images/portfolio.png" alt="Home page of my portfolio website">
+                <ul>
+                    <li><strong>Description:</strong> This responsive portfolio website, built from scratch with HTML,
+                        CSS, and JavaScript. It features a CSS Grid project gallery with JavaScript category filters and
+                        a validated contact form.</li>
+                    <li><strong>Completion date:</strong> October 2026 </li>
+                    <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Michel-Ange Kutu</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
